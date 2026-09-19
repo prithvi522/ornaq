@@ -3,6 +3,7 @@ import { BrowserRouter, Navigate, Route, Routes, useLocation } from "react-route
 import Navbar from "./components/Navbar";
 import AdminNavbar from "./components/AdminNavbar";
 import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
 import ShopPage from "./pages/ShopPage";
 import CategoriesPage from "./pages/CategoriesPage";
 import ProductPage from "./pages/ProductPage";
@@ -59,6 +60,7 @@ function AppRoutes() {
         <Routes>
           <Route path="/" element={<EntryRoute />} />
           <Route path="/home" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
           <Route path="/categories" element={<CategoriesPage />} />
           <Route path="/shop" element={<ShopPage />} />
           <Route path="/product/:slug" element={<ProductPage />} />

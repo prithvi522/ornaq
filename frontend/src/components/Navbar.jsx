@@ -132,6 +132,20 @@ export default function Navbar() {
               Home
             </NavLink>
 
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                `px-3 py-2 text-sm font-medium transition-colors ${
+                  isActive
+                    ? "text-brand-700 border-b-2 border-brand-700"
+                    : "text-zinc-500 hover:text-zinc-900"
+                }`
+              }
+              onClick={closeMobileMenu}
+            >
+              About
+            </NavLink>
+
             {/* SHOP */}
             <Link
               to="/shop"
@@ -593,6 +607,28 @@ export default function Navbar() {
                     onClick={closeMobileMenu}
                   >
                     <span className="flex-1">Home</span>
+
+                    <svg
+                      className="h-5 w-5 text-zinc-300"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </NavLink>
+
+                  <NavLink
+                    to="/about"
+                    className="nav-link"
+                    onClick={closeMobileMenu}
+                  >
+                    <span className="flex-1">About</span>
 
                     <svg
                       className="h-5 w-5 text-zinc-300"
